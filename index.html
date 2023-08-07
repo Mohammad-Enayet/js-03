@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Changing Attributes Value</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .wrapper-div{
+            width: 600px;
+            background-color: rgb(255, 255, 255);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid #333;
+        }
+        .wrapper-div h1{
+            font-size: 40px;
+        }
+        .wrapper-div button[type="button"]:nth-child(2){
+            background-color: green;
+            padding: 8px 30px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            border: 0px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+        .wrapper-div button[type="button"]:nth-child(2):hover{
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
+        .wrapper-div button[type="button"]:nth-child(4){
+            background-color: rgb(255, 0, 0);
+            padding: 8px 30px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            border: 0px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+        .wrapper-div button[type="button"]:nth-child(4):hover{
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper-div">
+        <h1>JavaScript Changing Attribute Value</h1>
+
+        <button type="button" onclick="document.getElementById('myImage').src='./images/pic_bulbon.gif'">Click to Turn On</button>
+        <img id="myImage" src="./images/pic_bulboff.gif" alt="">
+        <button type="button" onclick="document.getElementById('myImage').src='./images/pic_bulboff.gif'">Click to Turn OFF</button>
+    </div>
+</body>
+</html>
